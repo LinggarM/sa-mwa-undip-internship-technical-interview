@@ -85,9 +85,9 @@ Response :
       "status" : "string"
   }
   {
-    "username" : "string, unique",
-    "password" : "string",
-    "status" : "string"
+      "username" : "string, unique",
+      "password" : "string",
+      "status" : "string"
   }
   .
   .
