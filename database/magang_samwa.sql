@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 20, 2023 at 04:21 PM
+-- Generation Time: Mar 20, 2023 at 04:47 PM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.2.32
 
@@ -26,14 +26,25 @@ USE `magang_samwa`;
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `data_keluarga`
+--
+
+CREATE TABLE `data_keluarga` (
+  `id` int(11) NOT NULL,
+  `nama` varchar(100) NOT NULL,
+  `sebagai` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `user`
 --
 
-CREATE TABLE IF NOT EXISTS `user` (
+CREATE TABLE `user` (
   `username` varchar(50) NOT NULL,
   `password` varchar(20) NOT NULL,
-  `status` varchar(11) NOT NULL,
-  PRIMARY KEY (`username`)
+  `status` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -47,6 +58,16 @@ INSERT INTO `user` (`username`, `password`, `status`) VALUES
 ('Johan', '$2y$10$4GYrLHQYP6rZG', 'Aktif'),
 ('Linggar', '$2y$10$L/C4SFzId47OU', 'Aktif'),
 ('Ricky', '$2y$10$c81qNQP2q.wLw', 'Aktif');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`username`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
